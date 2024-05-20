@@ -41,7 +41,11 @@ public class App1 {
 		 * As this will make code more manageable.
 		 * This is our goal.
 		 */
-
-		// For Select One Or Select All , You need to use RowMapper, Whether you like it or not ?
+		
+		
+		/**
+		For Select One Or Select All , You need to use RowMapper, Whether you like it or not ?
+		/Row Mapper is the solution Provided by Spring JDBC
+		*/
 	}
 }

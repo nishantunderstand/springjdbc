@@ -1,15 +1,13 @@
-package com.spring.jdbcwithoutxml;
+package com.spring.jdbcwithoutxmlSterotypeAnnotation;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
-import com.spring.jdbc.dao.StudentDao;
-import com.spring.jdbc.dao.StudentDaoImpl;
-
-@Configuration 
-// @Component // It will work fine, But Not Recommended
+@Configuration
+@ComponentScan(basePackages = { "com.spring.jdbc.dao" })
 public class JdbcConfig{
 /**
  * 
@@ -47,14 +45,11 @@ public class JdbcConfig{
 		return jdbcTemplate;
 	}
 
-	// Approach 1 By Declaring the StudentDao Bean 
-	// Approach 2 , If you mentioned @ComponentScan, Then no need to declare it.
-	@Bean("studentDao")
-	public StudentDao getStudentDao() {
-		StudentDaoImpl studentDaoImpl = new StudentDaoImpl();
-		studentDaoImpl.setJdbcTemplate(getTemplate());
-		return studentDaoImpl;
+	
+	// Approach 2 
+	// Not Mentioning the Object Of Dao Class
+	// Just told to Scan the Class
 
 	}
 	
-}
+

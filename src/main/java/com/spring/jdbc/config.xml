@@ -32,7 +32,8 @@
 
 		<!-- Deprecated
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		-->
+		 -->
+	
 		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://Localhost:3306/springjdbc" />
 		<property name="username" value="root" />
