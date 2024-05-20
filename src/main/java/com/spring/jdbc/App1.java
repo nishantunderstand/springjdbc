@@ -21,7 +21,7 @@ public class App1 {
 		 *  So that we can manipulate the data. 
 		 */
 		
-
+		System.out.println("App1 is working :");
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/jdbc/config.xml");
 		JdbcTemplate template = context.getBean("jdbcTemplate", JdbcTemplate.class);
 		// Insert Query

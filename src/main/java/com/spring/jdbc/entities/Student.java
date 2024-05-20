@@ -6,8 +6,7 @@ public class Student {
 	private String city;
 	
 	public Student() {
-		super();
-		
+		super();		
 	}
 
 	public Student(int id, String name, String city) {
