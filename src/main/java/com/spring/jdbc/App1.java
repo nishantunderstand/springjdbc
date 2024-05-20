@@ -22,17 +22,19 @@ public class App1 {
 		 */
 		
 		System.out.println("App1 is working :");
-		ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/jdbc/config.xml");
+		ApplicationContext context = 
+				new ClassPathXmlApplicationContext("com/spring/jdbc/config.xml");
 		JdbcTemplate template = context.getBean("jdbcTemplate", JdbcTemplate.class);
+		
 		// Insert Query
 		// ? is called placeHolder
 		System.out.println("Inserting Data into Mysql : ");
 		String query = "insert into student(id,name,city) values(?,?,?)";
-
+		
 		// Fire the Query
-		int result = template.update(query, 6, "Aman1", "Delhi");
+		int result = template.update(query, 1, "Aman1", "Delhi");
 		System.out.println("Number of Record Inserted : " + result);
-
+		System.out.println("Create is working Fine :");
 		/**
 		 * This is code,
 		 * As this is not manageable, so we are following designing Pattern
@@ -40,5 +42,6 @@ public class App1 {
 		 * This is our goal.
 		 */
 
+		// For Select One Or Select All , You need to use RowMapper, Whether you like it or not ?
 	}
 }
