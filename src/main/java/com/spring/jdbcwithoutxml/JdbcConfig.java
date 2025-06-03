@@ -15,9 +15,7 @@ public class JdbcConfig{
  * 
  * We are using this instead of XML
  * This is not a starting point of Program.
- */
-	
-	
+ */		
 	@Bean("ds")
 	// All the mentioned Below are correct. 
 	// You can use any one of them. 

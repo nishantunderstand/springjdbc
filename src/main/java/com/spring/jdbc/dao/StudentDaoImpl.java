@@ -11,6 +11,7 @@ import com.spring.jdbc.entities.Student;
 
 @Component("studentDao")
 public class StudentDaoImpl implements StudentDao {
+
 /**
  * This class need Object of Jdbc Template for functioning.
  * So some body need to write new Object 	
@@ -27,6 +28,7 @@ public class StudentDaoImpl implements StudentDao {
 	}
 	
 
+	@Override
 	public int insert(Student student) 
 	{
 		//Insert
@@ -35,6 +37,7 @@ public class StudentDaoImpl implements StudentDao {
 		return r;
 	}
 
+	@Override
 	public int change(Student student) {
 		// update
 		String query = "update student set name=?,city=? where id=?";
@@ -42,12 +45,15 @@ public class StudentDaoImpl implements StudentDao {
 		return r;
 	}
 
+	@Override
 	public int delete(int studentID) {
 		// delete
 		String query = "delete from student where id=?";
 				int r =this.jdbcTemplate.update(query,studentID);
 		return r;
 	}
+	
+	@Override
 	public Student getStudent(int studentId) {
 		// Select Single Student Data
 		String query = "select * from student where id=?";
@@ -58,6 +64,7 @@ public class StudentDaoImpl implements StudentDao {
 		return student;
 	}
 
+	@Override
 	public List<Student> getAllStudents() {
 		// Selecting All Student Data
 		String query = "select * from student";
@@ -70,11 +77,5 @@ public class StudentDaoImpl implements StudentDao {
 		// Approach 2 , Anonymous Object is really better
 		List<Student> students = this.jdbcTemplate.query(query,new RowMapperImpl()); 
 		return students;
-	}
-	
-	
-	
-	
-	
-	
+	}		
 }

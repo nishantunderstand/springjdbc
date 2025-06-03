@@ -13,8 +13,8 @@
 
 
 	<!-- 2. My SQL Connectivity 
-	We don't need DriverManager From Java SQL
-	We require DriverManagerDataSource From Spring Framework
+		We don't need DriverManager From Java SQL
+		We require DriverManagerDataSource From Spring Framework
 	-->
 	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource"
 		id="ds">

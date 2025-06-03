@@ -5,8 +5,6 @@
 	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-
-
 	
 	<!--  1a Spring JDBC By Property
 		<bean class="org.springframework.jdbc.core.JdbcTemplate" name="jdbcTemplate">
@@ -27,8 +25,7 @@
 	-->
 
 	<!-- 2. My SQL Connectivity -->
-	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource"
-		id="ds">
+	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="ds">
 
 		<!-- Deprecated
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />

@@ -1,0 +1,16 @@
+src/main/java
+	com.spring.jdbc
+	com.spring.jdbc.dao
+		StudentDao.java
+		StudentDaoImpl.java
+	com.spring.jdbc.daoImplementation
+	com.spring.jdbc.entities
+		Student.java
+		
+src/main/resources
+	config.xml	
+
+src/test/java
+	App.java
+
+pom.xml

@@ -5,6 +5,14 @@
 
 - Project Structure is really important 
 
+https://www.youtube.com/watch?v=-cIzNsyheSg
+
+if src structure is missing, Root Cause
+Java Version Issue.
+Always try to fix that one.
+
+
+
 ```md
 springjdbc/
 ├── pom.xml

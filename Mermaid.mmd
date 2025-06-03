@@ -1,0 +1,44 @@
+classDiagram
+    %% === Package: com.spring.jdbc.entities ===
+    class Student {
+        - int id
+        - String name
+        - String city
+        + getId()
+        + setId(int)
+        + getName()
+        + setName(String)
+        + getCity()
+        + setCity(String)
+    }
+
+    %% === Package: com.spring.jdbc.dao ===
+    class StudentDao {
+        <<interface>>
+        + int insert(Student student)
+        + int update(Student student)
+        + int delete(int studentId)
+        + Student getStudent(int studentId)
+        + List~Student~ getAllStudents()
+    }
+
+    class StudentDaoImpl {
+        - JdbcTemplate jdbcTemplate
+        + setJdbcTemplate(JdbcTemplate)
+        + insert(Student)
+        + update(Student)
+        + delete(int)
+        + getStudent(int)
+        + getAllStudents()
+    }
+
+    %% === Package: com.spring.jdbc ===
+    class App {
+        <<test>>
+        + main(String[] args)
+    }
+
+    %% Relationships
+    StudentDao <|-- StudentDaoImpl
+    StudentDaoImpl --> Student
+    App --> StudentDaoImpl

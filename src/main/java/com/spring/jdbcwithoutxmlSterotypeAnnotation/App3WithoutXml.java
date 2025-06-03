@@ -60,8 +60,5 @@ public class App3WithoutXml {
 		int result2 = studentDao.delete(student.getId());
 		//int result2 = studentDao.delete(2);
 		System.out.println("Student Deleted Delete is working Fine" + result2);
-	
-
-
 	}
 }
