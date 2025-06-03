@@ -5,10 +5,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 
-public class App1 {
+public class App2025 {
 	public static void main(String[] args) {
 		System.out.println("My Program Started.......");
-		System.out.println("========== My Program Started ================");
+		System.out.println("========== My Program Started LATEST 2025 ================");
 
 		/**
 		 * 	1. context --> ClassPath / Annotation, I don't care
@@ -24,7 +24,7 @@ public class App1 {
 		
 		System.out.println("App1 is working :");
 		ApplicationContext context = 
-				new ClassPathXmlApplicationContext("com/spring/jdbc/config.xml");
+				new ClassPathXmlApplicationContext("config.xml");
 		JdbcTemplate template = context.getBean("jdbcTemplate", JdbcTemplate.class);
 		
 		// Insert Query
