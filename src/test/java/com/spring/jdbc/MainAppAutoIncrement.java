@@ -17,7 +17,7 @@ public class MainAppAutoIncrement {
 	public static void main(String[] args) {
 		System.out.println("=== Following Correct Structure 2025-06-03 === ");
 		AbstractApplicationContext context = 
-				new ClassPathXmlApplicationContext("config.xml");
+				new ClassPathXmlApplicationContext("config_20250604.xml");
 		
 		JdbcTemplate template = context.getBean("jdbcTemplate",JdbcTemplate.class);
 		// Create table 
