@@ -47,7 +47,7 @@ public class App2025 {
 		
 		/**
 		For Select One Or Select All , You need to use RowMapper, Whether you like it or not ?
-		/Row Mapper is the solution Provided by Spring JDBC
+		Row Mapper is the solution Provided by Spring JDBC
 		*/
 	}
 }
