@@ -15,10 +15,11 @@
 	<!-- 2. My SQL Connectivity 
 		We don't need DriverManager From Java SQL
 		We require DriverManagerDataSource From Spring Framework
+		Localhost => localhost (More Correct)
 	-->
 	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="ds">
 		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://Localhost:3306/springjdbc" />
+		<property name="url" value="jdbc:mysql://localhost:3306/springjdbc" /> 
 		<property name="username" value="root" />
 		<property name="password" value="root" />
 	</bean>
