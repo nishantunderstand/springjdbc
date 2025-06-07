@@ -1,6 +1,6 @@
 package com.spring.jdbc;
 
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -23,7 +23,7 @@ public class App2025 {
 		 */
 		
 		System.out.println("App1 is working :");
-		ApplicationContext context = 
+		AbstractApplicationContext context = 
 				new ClassPathXmlApplicationContext("config.xml");
 		JdbcTemplate template = context.getBean("jdbcTemplate", JdbcTemplate.class);
 		
@@ -49,5 +49,7 @@ public class App2025 {
 		For Select One Or Select All , You need to use RowMapper, Whether you like it or not ?
 		Row Mapper is the solution Provided by Spring JDBC
 		*/
+		
+		context.close();
 	}
 }

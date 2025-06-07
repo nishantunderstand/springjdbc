@@ -1,6 +1,6 @@
 package com.spring.jdbc;
 
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.spring.jdbc.dao.StudentDao;
@@ -14,7 +14,7 @@ public class App2ByDao {
 		System.out.println("My Program Started.......");
 		// spring jdbc => JDBC Template
 
-		ApplicationContext context = 
+		AbstractApplicationContext context = 
 				new ClassPathXmlApplicationContext("config_ByAppByDao.xml");
 	
 		StudentDao studentDao = context.getBean("studentDao", StudentDao.class);
@@ -56,8 +56,13 @@ public class App2ByDao {
 		 * System.out.println("Student Deleted" + result2);
 		 * System.out.println("Delete");
 		 */
+		
+		context.close();
 	}
 }
+
+
+
 
 /** Archived Code
 

@@ -2,8 +2,8 @@ package com.spring.jdbcwithoutxmlSterotypeAnnotation;
 
 import java.util.List;
 
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 
 import com.spring.jdbc.dao.StudentDao;
 import com.spring.jdbc.entities.Student;
@@ -14,7 +14,7 @@ public class App3WithoutXml {
 		
 		// spring jdbc => JDBC Template
 
-		ApplicationContext context = 
+		AbstractApplicationContext context = 
 				new AnnotationConfigApplicationContext(JdbcConfig.class);
 		//new ClassPathXmlApplicationContext("com/spring/jdbc/config.xml");
 
@@ -60,5 +60,7 @@ public class App3WithoutXml {
 		int result2 = studentDao.delete(student.getId());
 		//int result2 = studentDao.delete(2);
 		System.out.println("Student Deleted Delete is working Fine" + result2);
+		
+		context.close();
 	}
 }
